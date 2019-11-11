@@ -1,0 +1,25 @@
+<div class="main">
+
+  <a href="#!/dashboard" class="right btn btn-primary btn-md">Back</a><br><br>
+
+  <div ng-controller="salonController">
+    <form ng-submit="addSalon()">
+      <input type="file" class="email col-4 form-control" ng-model="salonLogo" ng-required="true">
+      <br><br>
+      <input type="text" class="email col-4 form-control" placeholder="Address Line 1" ng-model="salonAddress1" ng-required="true">
+      <br>
+      <input type="text" class="email col-4 form-control" placeholder="Address Line 2" ng-model="salonAddress2">
+      <br>
+      <input type="text" class="email col-4 form-control" placeholder="City" ng-model="salonCity" ng-required="true">
+      <br>
+      <input type="text" class="email col-4 form-control" placeholder="State" ng-model="salonState" ng-required="true">
+      <br>
+      <input type="text" class="password col-4 form-control" placeholder="Zipcode" ng-model="salonZip" ng-required="true">
+      <br>
+      <input type="text" class="password col-4 form-control" placeholder="Phone Number" ng-model="salonPhone" ng-required="true">
+      <br>
+      <button type="submit" class="btn btn-primary" id="btn-save">Save</button>
+
+    </form>
+  </div>
+</div>

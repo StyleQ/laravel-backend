@@ -1,0 +1,69 @@
+<div class="client" ng-controller="clientController">
+  <a href="#!/myClients" class="right btn btn-primary btn-md">Back</a><br><br>
+
+      <p>
+        <h3>{{client.first}} {{client.last}}</h3><br>
+        <strong>Birthday:</strong> {{client.dob | date: 'MM-dd-yyyy'}}<br>
+        <strong>Phone Number:</strong> {{client.phone}}<br>
+        <strong>Email Address:</strong> {{client.email}}<br>
+        <strong>Home Address:</strong> {{client.address}}<br>
+      </p>
+
+
+    <div class="card" style="width: 50rem;">
+      <div class="card-body">
+        <h4 class="card-title" style="float: left; margin-left: 10px; margin-top: 10px;">Hair Card</h4>
+        <button class="btn btn-sm btn-danger" style="float: right; margin-right: 25px; margin-top: 10px;">X</button>
+        <a href="#!/hairCard/{{client.id}}" class="btn btn-sm btn-primary" style="float: right; margin-right: 15px; margin-top: 10px;">Add</a>
+      </div>
+      <div ng-controller="hairController">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Condition: {{hairCard.condition}}</li>
+          <li class="list-group-item">Scalp: {{hairCard.scalp}}</li>
+          <li class="list-group-item">Texture: {{hairCard.texture}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="width: 50rem;">
+      <div class="card-body">
+        <h4 class="card-title" style="float: left; margin-left: 10px; margin-top: 10px;">Makeup Card</h4>
+        <button class="btn btn-sm btn-danger" style="float: right; margin-right: 25px; margin-top: 10px;">X</button>
+        <a href="#!/makeupCard/{{client.id}}" class="btn btn-sm btn-primary" style="float: right; margin-right: 15px; margin-top: 10px;">Edit</a>
+      </div>
+      <div ng-controller="makeupController">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Complexion: {{makeupCard.complexion}}</li>
+          <li class="list-group-item">Tone: {{makeupCard.tone}}</li>
+          <li class="list-group-item">Type: {{makeupCard.type}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="width: 50rem;">
+      <div class="card-body">
+        <h4 class="card-title" style="float: left; margin-left: 10px; margin-top: 10px;">Nails Card</h4>
+        <button class="btn btn-sm btn-danger" style="float: right; margin-right: 25px; margin-top: 10px;">X</button>
+        <button class="btn btn-sm btn-primary" style="float: right; margin-right: 15px; margin-top: 10px;">Edit</button>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+    </div>
+
+    <div class="card" style="width: 50rem;">
+      <div class="card-body">
+        <h4 class="card-title" style="float: left; margin-left: 10px; margin-top: 10px;">Skin Card</h4>
+        <button class="btn btn-sm btn-danger" style="float: right; margin-right: 25px; margin-top: 10px;">X</button>
+        <button class="btn btn-sm btn-primary" style="float: right; margin-right: 15px; margin-top: 10px;">Add</button>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"></li>
+        <li class="list-group-item"></li>
+        <li class="list-group-item"></li>
+      </ul>
+    </div>
+
+</div>

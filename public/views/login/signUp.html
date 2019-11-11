@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up with Style Q</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+  <link rel="stylesheet" href="styleq/public/views/login/main.css">
+  <link rel="icon" href="/favicon.png" sizes="32x32">
+  <script defer src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="main col-xs-12" ng-controller="signupController">
+<section class="hero is-fullheight is-default is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div id="main" class="column is-half is-centered has-nice-link">
+          <h1 class="title is-2">Try Style Q! <span></span></h1>
+          <h2 class="title is-4">We want you to experience the smart way to book</h2>
+              <form ng-submit="addSignup()">
+                  <div class="form-group">
+
+                      <label class="label">First Name*</label>
+                      <input type="text" class="try form-control col-3" id="first" name="first" ng-model="newSignupFirst" ng-required="true"><br>
+
+                      <label class="label">Last Name*</label>
+                      <input type="text" class="try form-control col-3" id="first" name="first" ng-model="newSignupLast" ng-required="true"><br>
+
+                      <label class="label">Business Name*</label>
+
+                      <input type="text" class="try form-control col-3" id="business" name="business" ng-model="newSignupBusiness" ng-required="true"><br>
+
+                      <label class="label">Email*</label>
+                      <input type="email" class="try form-control col-3" id="first" name="email" ng-model="newSignupEmail" ng-required="true"><br>
+
+
+                      <label class="label">Phone Number*</label>
+                      <input type="text" class="try form-control col-3" id="first" name="phone" ng-model="newSignupPhone" ng-required="true"><br>
+
+
+                      <label class="label">Role*</label>
+                      <div class="form-group">
+                          <select class="try form-control col-3" name="role" ng-model="newSignupRole">
+                              <option value="owner">Salon Owner</option>
+                              <option value="independent">Independent Stylist</option>
+                          </select>
+                      </div>
+
+            <div class="control is-grouped">
+              <p class="control">
+                <button class="button is-primary is-large" type="submit">Send Mail</button>
+              </p>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

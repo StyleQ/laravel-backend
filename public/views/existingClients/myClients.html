@@ -1,0 +1,33 @@
+<div class="col-lg-12" ng-controller="clientController">
+
+  <input type="text" class="left form-control col-8" placeholder="Search Clients" ng-model="search">
+  <a href="#!/dashboard" class="right btn btn-primary btn-md">Back</a><br><br>
+    <a href="#!/newClient" class="right btn btn-primary btn-md">Add New Client</a><br><br>
+
+    <br>
+    <div class="input-group">
+
+      <table class="table">
+          <thead>
+              <tr>
+                  <th>Last Name</th>
+                  <th>First Name</th>
+                  <th>Phone Number</th>
+                  <th></th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr ng-repeat="client in clients | filter:search">
+                  <td>{{ client.last }}</td>
+                  <td>{{ client.first }}</td>
+                  <td>{{ client.phone }}</td>
+                  <td>
+                      <a href="#!/transactions" class="btn btn-secondary">Transactions</a>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>

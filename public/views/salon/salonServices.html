@@ -1,0 +1,181 @@
+<div class="services" >
+
+  <h2 class="left">Company Name Services</h2>
+  <a href="#!/dashboard" class="right btn btn-primary btn-md">Back</a><br><br><br>
+
+  <div ng-controller="servicesController">
+      <table class="table">
+          <thead>
+              <tr>
+                  <th>Service</th>
+                  <th>Category</th>
+                  <th>Duration</th>
+                  <th>Price</th>
+                  <th>Description</th>
+                  <th><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">Add New Service</button></th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr ng-repeat="service in services | orderBy:'category'">
+                  <td>{{ service.name }}</td>
+                  <td>{{ service.category }}</td>
+                  <td>{{ service.duration }}</td>
+                  <td>${{ service.price }}</td>
+                  <td>{{ service.description }}</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal2">Edit</button>
+                    <button class="btn btn-danger btn-xs btn-delete" ng-click="removeService(service)">Delete</button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+      <!-- End of Table-to-load-the-data Part -->
+      <!-- Modal (Pop up when detail button clicked) -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+
+                      <h4 class="modal-title" id="myModalLabel">New Service</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  </div>
+                  <div class="modal-body">
+                      <form name="frmServices" class="form-horizontal" ng-submit="addService()">
+
+                          <div class="form-group">
+                              <label class="col-sm-3 control-label">Service</label>
+                              <div class="col-sm-7">
+                                  <input type="text" class="form-control" id="name" name="name"
+                                  ng-model="newServiceName" ng-required="true">
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label class="col-sm-3 control-label">Category</label>
+                              <div class="col-sm-9">
+
+                                <select class="options custom-select" name="category" ng-model="newServiceCategory" ng-required="true">
+                                  <option value="Hair" selected="selected">Hair</option>
+                                  <option value="Makeup">Makeup</option>
+                                  <option value="Nails">Nails</option>
+                                  <option value="Skin">Skin</option>
+                              </select>
+
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label class="col-sm-3 control-label">Duration</label>
+                              <div class="col-sm-9">
+                                <select class="options custom-select" name="duration" ng-model="newServiceDuration" ng-required="true" value="{service.name}">
+                                  <option value="30 MIN">30 MIN</option>
+                                  <option value="1 HR" selected="selected">1 HR</option>
+                                  <option value="1 HR 30 MIN">1 HR 30 MIN</option>
+                                  <option value="2 HR">2 HR</option>
+                                  <option value="2 HR 30 MIN">2 HR 30 MIN</option>
+                                  <option value="3 HR">3 HR</option>
+                              </select>
+
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label class="col-sm-3 control-label">Price</label>
+                              <div class="col-sm-7">
+                                  <input type="text" class="form-control" id="price" name="price"
+                                  ng-model="newServicePrice" ng-required="true">
+
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label class="col-sm-3 control-label">Description</label>
+                              <div class="col-sm-7">
+                                <textarea rows="5" cols="30" class="form-control" id="description" name="description"
+                                ng-model="newServiceDescription" ng-required="true"></textarea>
+
+                              </div>
+                          </div>
+
+                          <button type="submit" class="btn btn-primary" id="btn-save">Add Service</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+
+                      <h4 class="modal-title" id="myModalLabel2">Edit Service</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  </div>
+                  <div class="modal-body">
+                      <form name="frmServices" class="form-horizontal" ng-submit="editService()">
+
+                          <div class="form-group">
+                              <label class="col-sm-3 control-label">Service</label>
+                              <div class="col-sm-7">
+                                  <input type="text" class="form-control" id="name" name="name" ng-model="editServiceName" ng-required="true">
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label class="col-sm-3 control-label">Category</label>
+                              <div class="col-sm-9">
+
+                                <select class="options custom-select" name="category" ng-model="editServiceCategory" ng-required="true">
+                                  <option value="Hair" selected="selected">Hair</option>
+                                  <option value="Makeup">Makeup</option>
+                                  <option value="Nails">Nails</option>
+                                  <option value="Skin">Skin</option>
+                              </select>
+
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label class="col-sm-3 control-label">Duration</label>
+                              <div class="col-sm-9">
+                                <select class="options custom-select" name="duration" ng-model="editServiceDuration" ng-required="true">
+                                  <option value="30 MIN HR">30 MIN</option>
+                                  <option value="1 HR" selected="selected">1 HR</option>
+                                  <option value="1 HR 30 MIN">1 HR 30 MIN</option>
+                                  <option value="2 HR">2 HR</option>
+                                  <option value="2 HR 30 MIN">2 HR 30 MIN</option>
+                                  <option value="3 HR">3 HR</option>
+                              </select>
+
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label class="col-sm-3 control-label">Price</label>
+                              <div class="col-sm-7">
+                                  <input type="text" class="form-control" id="price" name="price"
+                                  ng-model="editServicePrice" ng-required="true">
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label class="col-sm-3 control-label">Description</label>
+                              <div class="col-sm-7">
+                                <textarea rows="5" cols="30" class="form-control" id="description" name="description"
+                                ng-model="editServiceDescription" ng-required="true"></textarea>
+                              </div>
+                          </div>
+
+                          <button type="submit" class="btn btn-secondary" id="btn-save">Update Service</button>
+
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,21 @@
+<div ng-controller="appointmentController">
+  <h2 class="left">Makeup Consultation</h2><br><br><br><br>
+  <form class="form-group" ng-submit="addAppointment()">
+    <div class="appointment form-horizontal col-3">
+      <input class="form-control" type="date" name="" value="" ng-model="appointmentDate">
+      <input class="form-control" type="time" name="" value="" ng-model="appointmentTime">
+    </div>
+
+    <div class="type col-3">
+      <select class="form-control" ng-model="appointmentStylist">
+        <option value="{{stylist.first}}" ng-repeat="stylist in stylists">{{stylist.first}} {{stylist.last}}</option>
+      </select>
+
+        <select class="form-control" ng-model="appointmentService" >
+          <option value="{{service.name}}" ng-repeat="service in services | filter:'makeup'">{{service.name}}</option>
+        </select>
+      </div><br><br><br>
+
+    <button type="submit" class="btn btn-primary" id="btn-save">Book Appointment</button><br><br><br>
+  </form>
+</div>

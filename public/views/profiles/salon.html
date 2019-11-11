@@ -1,0 +1,122 @@
+<div class="main">
+
+  <div class="left col-xs-4">
+    <img alt="logo" class="logo">
+    <h6>123 Happy Street <br> Milwaukee, WI 12345 <br> (414)123-4567</h6>
+    <br><br>
+    <p style="font-size:13px;">
+      *Please note if you are more <br>
+      than 15 minutes late for your <br>
+      visit, it will automatically be <br>
+      canceled and you will be charged <br>
+      with a late fee and will need <br>
+      to make another reservation.
+    </p>
+  </div>
+
+  <div>
+    <div>
+      <img alt="Photos" class="photos2">
+    </div><br><br>
+
+    <div>
+        <form class="form-group" action="index.html" method="post">
+          <div class="left2">
+            <input class="form-control" type="text" name="name" placeholder="First Name"><br>
+            <input class="form-control" type="text" name="service" placeholder="Service"><br>
+            <input class="form-control" type="text" name="date" placeholder="Date"><br>
+            <input class="form-control" type="text" name="email" placeholder="Email"><br>
+            <select class="form-control" name="client">
+                <option value="new">New Client</option>
+                <option value="returning">Returning Client</option>
+            </select>
+
+          </div>
+
+          <div class="right2">
+            <input class="form-control" type="text" name="last" placeholder="Last Name"><br>
+            <input class="form-control" type="text" name="provider" placeholder="Service Provider"><br>
+            <input class="form-control" type="text" name="time" placeholder="Time"><br>
+            <input class="form-control" type="text" name="phone" placeholder="Phone Number"><br>
+            <input class="form-control" type="text" name="add" placeholder="Add Another Service">
+        </div>
+      </form>
+    </div>
+
+    <div>
+      <a href="#!/confirmed" class="book btn btn-md btn-secondary">
+        <h5>Book</h5>
+      </a>
+    </div>
+
+  </div>
+</div><br><br>
+
+  <div ng-controller="servicesController">
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <h3>Hair</h3>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="service in services | filter:'hair'">
+                <td>{{ service.name }}</td>
+                <td>${{ service.price }}</td>
+                <td>{{ service.description }}</td>
+            </tr>
+        </tbody>
+    </table><br>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <h3>Makeup</h3>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="service in services | filter:'makeup'">
+                <td>{{ service.name }}</td>
+                <td>${{ service.price }}</td>
+                <td>{{ service.description }}</td>
+            </tr>
+        </tbody>
+    </table><br>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <h3>Nails</h3>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="service in services | filter:'nails'">
+                <td>{{ service.name }}</td>
+                <td>${{ service.price }}</td>
+                <td>{{ service.description }}</td>
+            </tr>
+        </tbody>
+    </table><br>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <h3>Spa</h3>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="service in services | filter:'spa'">
+                <td>{{ service.name }}</td>
+                <td>${{ service.price }}</td>
+                <td>{{ service.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+  </div>
+
+
+</div>

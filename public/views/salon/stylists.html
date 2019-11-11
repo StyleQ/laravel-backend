@@ -1,0 +1,27 @@
+<div class="main" ng-controller="userController">
+  <div class="analytics">
+      <div >
+        <a href="#!/dashboard" class="right btn btn-secondary">Back</a><br>
+          <table class="table">
+              <thead>
+              <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Email</th>
+                  <th><a href="#!/addStylist" class="reports btn btn-md btn-success">
+                      Add New Stylist
+                  </a></th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr ng-repeat="stylist in stylists">
+                  <td >{{ stylist.first }}</td>
+                  <td >{{ stylist.last }}</td>
+                  <td>{{ stylist.email }}</td>
+                  <td><button class="btn btn-danger btn-sm btn-delete" ng-click="removeStylist(stylist)">X</button></td>
+              </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>

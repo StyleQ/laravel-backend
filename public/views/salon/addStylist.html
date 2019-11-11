@@ -1,0 +1,22 @@
+<div class="main" ng-controller="stylistController">
+  <form ng-submit="addStylist()">
+      <div class="form-group">
+
+          <label class="label">First Name</label>
+          <input type="text" class="try form-control col-3" id="first" name="first" ng-model="stylistFirst" ng-required="true"><br>
+
+          <label class="label">Last Name</label>
+          <input type="text" class="try form-control col-3" id="last" name="last" ng-model="stylistLast" ng-required="true"><br>
+
+          <label class="label">Email</label>
+          <input type="email" class="try form-control col-3" id="email" name="email" ng-model="stylistEmail" ng-required="true"><br>
+
+
+          <label class="label">Password</label>
+          <input type="password" class="try form-control col-3" id="password" name="password" ng-model="stylistPassword" ng-required="true"><br>
+
+
+    <button class="button btn btn-primary" type="submit">Save</button>
+
+  </form>
+</div>

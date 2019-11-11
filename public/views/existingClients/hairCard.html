@@ -1,0 +1,102 @@
+<div class="main">
+
+  <div ng-controller="hairController" >
+      <h2 class="left">Hair Card</h2><br><br>
+      <form id="hair" class="form-horizontal" ng-submit="addHair()">
+          <div class="hair form-group">
+
+              <div class="hair-condition">
+                <label>Hair Condition</label>
+                <select class="form-control" ng-model="hairCondition">
+                  <option value="Oily">Oily</option>
+                  <option value="Dry">Dry</option>
+                  <option value="Normal">Normal</option>
+                  <option value="Heat Damaged">Heat Damaged</option>
+                  <option value="Split Ends">Split Ends</option>
+                </select>
+              </div>
+
+              <div class="type">
+                <label>Scalp Condition</label>
+                <select class="form-control" ng-model="hairScalp">
+                  <option value="Normal">Normal</option>
+                  <option value="Oily">Oily</option>
+                  <option value="Dry">Dry</option>
+                </select>
+              </div>
+
+              <div class="type">
+                <label>Texture</label>
+                <select class="form-control" ng-model="hairTexture">
+                  <option value="Fine">Fine</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Coarse">Coarse</option>
+                </select>
+              </div>
+
+              <div class="type">
+                <label>Porosity</label>
+                <select class="form-control" ng-model="hairPorosity">
+                  <option value="Normal">Normal</option>
+                  <option value="Porous">Porous</option>
+                  <option value="Extra Porous">Extra Porous</option>
+                </select>
+              </div>
+
+
+                <div class="products">
+                  <textarea rows="7" cols="35" class="form-control" placeholder="Products Used:" ng-model="hairProducts"></textarea>
+                </div>
+
+            </div>
+
+            <div class="hair form-group">
+              <div class="info form-group">
+                <textarea rows="3" cols="20" class="base form-control" placeholder="Natural Base Level:" ng-model="hairBase"></textarea>
+
+                <textarea rows="3" cols="20" class="tonal form-control" placeholder="Tonal Level:" ng-model="hairTonal"></textarea>
+              </div>
+
+              <div class="info2">
+                <label>Hair Color Treatment</label>
+                <select class="form-control" ng-model="hairColor">
+                  <option value="N/A">N/A</option>
+                  <option value="Permanent">Permanent</option>
+                  <option value="Semi Permanent">Semi Permanent</option>
+                  <option value="Highlighted">Highlighted</option>
+                  <option value="Bleached">Bleached</option>
+                  <option value="Straightening">Straightening</option>
+                </select>
+              </div>
+
+              <div class="info2">
+                <label>Perms</label>
+                <select class="form-control" ng-model="hairPerm">
+                  <option value="N/A">N/A</option>
+                  <option value="Acid">Acid</option>
+                  <option value="Alkaline">Alkaline</option>
+                  <option value="Exothermic">Exothermic</option>
+                </select>
+              </div>
+
+              <div class="info2">
+                <label>Relaxer</label>
+                <select class="form-control" ng-model="hairRelaxer">
+                  <option value="N/A">N/A</option>
+                  <option value="Super">Super</option>
+                  <option value="Mild">Mild</option>
+                  <option value="Regular">Regular</option>
+                </select>
+              </div>
+
+              <div class="info2 form-group">
+                <textarea rows="5" cols="30" class="form-control" placeholder="Notes:" ng-model="hairNotes"></textarea>
+              </div><br><br>
+
+              <button type="submit" class="btn btn-primary" id="btn-save">Add Card</button>
+
+        </div>
+      </form>
+    </div>
+
+</div>

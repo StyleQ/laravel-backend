@@ -1,0 +1,136 @@
+<div class="main" ng-controller="makeupController">
+    <h2 class="left">Makeup Card</h2><br><br><br><br>
+    <form ng-submit="addMakeup()">
+        <div class="form-group">
+
+          <div class="complexion">
+            <label>Skin Type</label>
+            <select class="form-control" ng-model="makeupType">
+              <option value="Dry">Dry</option>
+              <option value="Combination">Combination</option>
+              <option value="Oily">Oily</option>
+              <option value="Sensitive">Sensitive</option>
+            </select>
+          </div>
+
+          <div class="type">
+            <label>Complexion</label>
+            <select class="form-control" ng-model="makeupComplexion">
+              <option value="Fair">Fair</option>
+            </select>
+          </div>
+
+          <div class="type">
+            <label>Undertone</label>
+            <select class="form-control" ng-model="makeupTone">
+              <option value="Warm">Warm</option>
+              <option value="Cool">Cool</option>
+            </select>
+          </div>
+
+          <div class="type">
+            <label>Texture</label>
+            <select class="form-control" ng-model="makeupTexture">
+              <option value="Smooth">Smooth</option>
+              <option value="Hyperpigmentation">Hyperpigmentation</option>
+              <option value="Acne">Acne</option>
+              <option value="Dry Spots">Dry Spots</option>
+              <option value="Blackheads">Blackheads</option>
+            </select>
+          </div>
+
+          <div class="top3 form-check" style="display:inline-block;">
+            <label>Eyes</label>
+            <label class="form-check-label" style="display:block; text-align:left;" ng-repeat="eye in eyes">
+              <input class="form-check-input" style="float:left;" type="checkbox" checklist-model="makeup.eyes" checklist-value="eye"> {{eye}}
+            </label>
+          </div>
+
+          <div class="top3 form-check" style="display:inline-block;">
+            <label>Lips</label>
+            <label class="form-check-label" style="display:block; text-align:left;" ng-repeat="lip in lips">
+              <input class="form-check-input" style="float:left;" type="checkbox" checklist-model="makeup.lips" checklist-value="lip"> {{lip}}
+            </label>
+          </div>
+
+
+          <div class="complexion form-group">
+            <label class="left">Overall Goal:</label>
+            <textarea rows="5" cols="15" class="form-control" ng-model="makeupGoal"></textarea>
+          </div>
+
+
+          <div class="type">
+            <label class="left">Products Used:</label>
+            <textarea rows="5" cols="30" class="form-control" ng-model="makeupProducts"></textarea>
+          </div>
+
+          <div class="type form-group">
+            <label class="left">Notes:</label>
+            <textarea rows="5" cols="20" class="form-control" ng-model="makeupNotes"></textarea>
+          </div><br><br>
+
+          <div class="left notes">
+            <div class="form-check">
+              <label style="display:block; text-align:left;">
+                  Have you had any recent tanning bed or sun <br> exposure that changed the color of your skin?
+              </label><br>
+              <label style="display:block; text-align:left;">
+                <input type="radio" ng-model="makeup.tanning" value="Yes">
+                  Yes
+              </label><br/>
+              <label style="display:block; text-align:left;">
+                <input type="radio" ng-model="makeup.tanning" value="No">
+                  No
+              </label><br/>
+            </div>
+
+            <div class="form-check">
+              <label style="display:block; text-align:left;">
+                  Have you experienced Botox, Restylane, or Collagen injections?
+              </label><br>
+              <label style="display:block; text-align:left;">
+                <input type="radio" ng-model="makeup.injections" value="Yes">
+                  Yes
+              </label><br/>
+              <label style="display:block; text-align:left;">
+                <input type="radio" ng-model="makeup.injections" value="No">
+                  No
+              </label><br/>
+            </div>
+
+            <div class="form-check">
+              <label style="display:block; text-align:left;">
+                  Are you using Glycolic Acid, Retinols, Retin-A, <br> Accutane or topical prescription medication?
+              </label><br>
+              <label style="display:block; text-align:left;">
+                <input type="radio" ng-model="makeup.prescription" value="Yes">
+                  Yes
+              </label><br/>
+              <label style="display:block; text-align:left;">
+                <input type="radio" ng-model="makeup.prescription" value="No">
+                  No
+              </label><br/>
+            </div><br>
+          </div>
+
+          <div class="type form-check" style="display:inline-block;">
+            <label>Allergies</label>
+            <label class="form-check-label" style="display:block; text-align:left;" ng-repeat="allergy in allergies">
+              <input class="form-check-input" style="float:left;" type="checkbox" checklist-model="makeup.allergies" checklist-value="allergy"> {{allergy}}
+            </label>
+          </div>
+
+          <div class="type form-check" style="display:inline-block;">
+            <label>Concerns</label>
+            <label class="form-check-label" style="display:block; text-align:left;" ng-repeat="concern in concerns">
+              <input class="form-check-input" style="float:left;" type="checkbox" checklist-model="makeup.concerns" checklist-value="concern"> {{concern}}
+            </label>
+          </div>
+
+
+          <button type="submit" class="btn btn-primary" id="btn-save">Add Card</button>
+
+      </div>
+    </form>
+</div>

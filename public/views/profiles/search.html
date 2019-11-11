@@ -1,0 +1,34 @@
+<div class="main" ng-controller="salonController">
+
+  <div class="left list-group col-7" ng-repeat="salon in salons">
+    <a href="#!/salon" class="list-group-item list-group-item-action">
+      <img alt="Company Photo" class="photo">
+
+      <p class="left" style="margin-left:50px;">
+          <br>
+          {{salon.name}}
+          <br>
+          Services Offered
+      </p>
+      <p class="right" style="margin-left:100px;">
+        {{salon.address1}}
+        <br>
+        {{salon.address2}}
+        <br>
+        {{salon.city}} {{salon.state}} {{salon.zip}}
+        <br>
+        {{salon.phone}}
+      </p>
+    </a>
+  </div>
+
+    <iframe
+      class="right"
+      width="450"
+      height="338"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/search?key=AIzaSyAG20pbq-pGO2iZP7xSo29GuzucNEnog3k
+      &q=record+salons+in+Milwaukee" allowfullscreen>
+    </iframe>
+
+</div>

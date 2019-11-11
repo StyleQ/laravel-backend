@@ -1,0 +1,195 @@
+.container, .email, .password, .add, .try {
+  margin: auto;
+}
+
+.client {
+  background-color: #f9f9f9;
+  margin:auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  border-radius: 15px;
+}
+
+.main{
+  text-align: center;
+}
+
+.main, .client, .container {
+  margin-top: 50px;
+}
+
+.works {
+  padding-bottom: 75px;
+  padding-top: 100px;
+}
+
+
+.photos2 {
+  height:200px;
+  width: 350px;
+}
+
+.images {
+  padding-top: 100px;
+  margin-bottom: 350px;
+}
+
+.stylists {
+    text-align: left;
+    padding-right: 500px;
+}
+
+.client, .gap {
+  margin-left: 100px;
+}
+
+.stylists, .left, .left2 {
+  float: left;
+}
+
+.right, .right2 {
+  float: right;
+}
+
+.left2 {
+  padding-left: 250px;
+}
+
+.right2 {
+  padding-right: 250px;
+}
+
+.book {
+  margin-top: 40px;
+  margin-left:200px;
+}
+
+.mydashboard, .analytics, .newClients, .myClients, .reports, .serviceRevenue, .salons{
+  display: inline-block;
+}
+
+.logo {
+  height:150px;
+  width: 150px;
+  margin-bottom: 50px;
+}
+
+.booking {
+  height: 250px;
+  width: 240px;
+}
+
+.news {
+  height: 250px;
+  width: 700px;
+}
+
+
+.myClients {
+  margin-left: 20px;
+}
+
+.image {
+  width: 185px;
+}
+
+.image5{
+  height: 200px;
+  width: 274px;
+  margin-bottom: 175px;
+}
+
+.photo {
+  float: left;
+  height:100px;
+  width: 100px;
+  display: inline;
+}
+
+.top {
+  display: inline-block;
+  margin-left: 100px;
+  vertical-align: top;
+}
+
+.top2 {
+  display: inline-block;
+  margin-left: 200px;
+  vertical-align: top;
+}
+
+.top3 {
+  display: inline-block;
+  margin-left: 25px;
+  vertical-align: top;
+}
+
+.hair {
+  margin-top: 50px;
+}
+
+.buttons {
+  margin-top: 45px;
+}
+
+.hair-condition, .products, .info, .info2, .notes, .complexion, .type, .appointment {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.products, .type, .info2 {
+  margin-left: 70px;
+}
+
+.notes {
+  margin-left: 25px;
+  margin-top: 25px;
+}
+
+.card {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+
+.footer {
+  text-align: center;
+  word-spacing: 200px;
+}
+
+.input-icon {
+  position: relative;
+}
+
+.list {
+  width: 25px;
+}
+
+.input-icon-right > input {
+  padding-left: 0;
+  padding-right: 25px;
+  text-align: right;
+}
+.btn-bs-file{
+    position:relative;
+}
+
+.btn-bs-file input[type="file"]{
+    position: absolute;
+    top: -9999999;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    width:0;
+    height:0;
+    outline: none;
+    cursor: inherit;
+}
+
+select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: url(dropdown.ico) right / 20px no-repeat #fff;
+        padding-right: 20px;
+}

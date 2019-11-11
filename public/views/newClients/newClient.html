@@ -1,0 +1,28 @@
+<div class="client">
+  <form ng-controller="clientController" id="client" class="form-horizontal" ng-submit="addClient()">
+
+      <div class="form-group">
+
+        <div class="top2 form-group">
+            <input type="text" class="name form-control" placeholder="First Name" name="first" ng-model="clientFirst">
+
+            <input type="text" class="form-control" placeholder="Last Name" name="last" ng-model="clientLast">
+
+            <input type="date" class="dob form-control" placeholder="DOB:" name="dob" ng-model="clientDob">
+
+        </div>
+
+        <div class="top3 form-group">
+            <input type="email" class="email2 form-control" placeholder="Email" name="email2" ng-model="clientEmail">
+
+            <input type="text" class="form-control" placeholder="Phone Number" name="phone" ng-model="clientPhone">
+
+            <input type="text" class="form-control" placeholder="Address" name="address" ng-model="clientAddress">
+
+        </div><br>
+
+        <button type="submit" class="btn btn-primary" id="btn-save">Continue</button>
+
+  </form>
+
+</div>

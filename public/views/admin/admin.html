@@ -1,0 +1,27 @@
+<div class="main" >
+  <div class="right" ng-controller="logoutController">
+    <a href="#!/addUser" class="btn btn-md btn-success">Add New User</a>
+    <button ng-click="logout()" type="submit" class="settings btn btn-primary">Logout</button>
+  </div>
+  <br>
+  <br>
+      <div ng-controller="userController">
+          <table class="table">
+              <thead>
+              <tr>
+                  <th>Business Name</th>
+                  <th>Email</th>
+                  <th>Role</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr ng-repeat="user in users">
+                  <td >{{ user.salon }}</td>
+                  <td>{{ user.email }}</td>
+                  <td>{{ user.role }}</td>
+                  <td></td>
+              </tr>
+              </tbody>
+          </table>
+      </div>
+</div>

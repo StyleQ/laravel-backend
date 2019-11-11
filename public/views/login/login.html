@@ -1,0 +1,19 @@
+<div class="main col-xs-12">
+  <br>
+  <h1>StyleQ</h1>
+  <br>
+
+
+  <div ng-controller="loginController">
+    <form name="login" ng-submit="addLogin()">
+      <input type="email" class="email col-3 form-control" placeholder="Email" ng-model="loginEmail" ng-required="true">
+      <br>
+      <input type="password" class="password col-3 form-control" placeholder="Password" ng-model="loginPassword" ng-required="true">
+      <br>
+      <button type="submit" class="btn btn-primary" id="btn-save" href="#!/dashboard">Sign In</button>
+
+    </form>
+  </div><br>
+  <a href="#!/admin" class="btn btn-secondary">Admin</a>
+
+</div>

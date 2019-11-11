@@ -1,0 +1,18 @@
+<div class="main" >
+    <a href="#!/dashboard" class="right btn btn-primary btn-md">Back</a><br><br>
+    <div ng-controller="userController">
+      <form ng-submit="updateLogin()">
+        <p>
+          <label>Email</label>
+          <input type="email" class="email col-3 form-control" ng-model="userEmail" value="{{users.email}}">
+        </p>
+        <p>
+          <label>Password</label>
+          <input type="password" class="password col-3 form-control" ng-model="userPassword">
+        </p>
+        <p>
+          <button type="submit" class="btn btn-primary" name="button">Update</button>
+        </p>
+      </form>
+    </div>
+</div>
